@@ -1,0 +1,41 @@
+class Cars:
+
+    def __init__(self, model, type, hp, cost):
+        self.model = model
+        self.type = type
+        self.hp = hp
+        self.cost = cost
+
+car1 = Cars("Bmw m4", "Coupe", 450, 93)
+car2 = Cars("Benz AMG E63", "Coupe", 465, 98)
+car3 = Cars("Audi S4", "Coupe", 452, 96)
+car4 = Cars("Jaguar XF", "Coupe", 396, 77)
+car5 = Cars("Mustang GT", "Coupe", 540, 74)
+i = 0
+prompt = "y"
+while i <= 5 and prompt == "y":
+    cars_list = [car1.model, car2.model, car3.model, car4.model, car5.model]
+    print(cars_list)
+    print(" ")
+    car_name = input("Enter the Car name: ")
+    if car_name == cars_list[0]:
+        print("\nThe "+car1.model+" is a "+car1.type+" with "+str(car1.hp)+" and costs about "+str(car1.cost)+" lakhs.\n")
+
+    elif car_name == cars_list[1]:
+        print("\nThe "+car2.model+" is a "+car2.type+" with "+str(car2.hp)+" and costs about "+str(car2.cost)+" lakhs.\n")
+
+    elif car_name == cars_list[2]:
+        print("\nThe "+car3.model+" is a "+car3.type+" with "+str(car3.hp)+" and costs about "+str(car3.cost)+" lakhs.\n")
+
+    elif car_name == cars_list[3]:
+        print("\nThe "+car4.model+" is a "+car4.type+" with "+str(car4.hp)+" and costs about "+str(car4.cost)+" lakhs.\n")
+
+    elif car_name == cars_list[4]:
+        print("\nThe "+car5.model+" is a "+car5.type+" with "+str(car5.hp)+" and costs about "+str(car5.cost)+" lakhs.\n")
+
+    else:
+        print("Invalid Car name!")
+
+    prompt = input("Do you want to know any more details? (Y/N): ")
+
+print("Thank you")
