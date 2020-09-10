@@ -1,0 +1,55 @@
+shopping_list = []
+outside_cart = False
+
+print("Welcome to e-commerce_site :")
+
+while not outside_cart:
+  print("")  # To enter a empty line
+  i = input("enter your command: ")
+
+  if i == "add":
+    item = input("Item you want to add: ")
+    shopping_list.append(item)
+    print(item + " is successfully added to the list !")
+
+  elif i == "delete":
+    item = input("Select item you want to remove from cart: ")
+    shopping_list.remove(item)
+    print(item + " is successfully removed from the list !")
+
+  elif i == "print":
+    print("Your shopping list : ")
+    k=1
+    for thing in shopping_list:
+         print(str(k) +" : "+ thing )
+         k+=1
+
+  elif i == "done":
+      outside_cart = True
+
+while outside_cart:
+    print("")
+    out = input("press yes to checkout: ")
+
+    if out == "yes":
+      print("going to payment......")
+      break
+
+    else:
+        print("waiting for your input.....")
+        
+ # off to payment gateway.
+ 
+pin = 4545
+i=0
+pass_login = False
+while i<=2 and not pass_login:
+    uv = int(input("enter the pin number: "))
+    i+=1
+    if uv == pin:
+        print("Success!, Logging you in.")
+        pass_login = True
+    elif uv!=pin and i<=2:
+        print("Try again...")
+    else:
+        print("\nYour access is denied!!")
